@@ -12,14 +12,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <title>Train Time!</title>
 </head>
+
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4 text-center">The Station</h1>
-            <p class="lead text-center">Train times are displayed below.  Feel free to add other trains to the schedule!</p>
+    <!-- The Station-->
+    <div class="container">    
+        <div class="jumbotron jumbotron-fluid py-2">
+            <div class="container">
+                <h1 class="display-4 text-center">The Station</h1>
+                <hr>
+                <p class="lead text-center">Train times are displayed below.  Feel free to add other trains to the schedule!</p>
+            </div>
         </div>
     </div>
-    <hr>
-    
+
+    <!-- Current Train Schedule-->
+    <div class="container mb-4">
+            <div class="card">
+                <h5 class="card-header">Current Train Schedule</h5>
+                <div class="card-body">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="train-list">
+                            <tr>
+                                <td>Hogwarts Express</td>
+                                <td>Hogwarts</td>
+                                <td>525600</td>
+                                <td>11:00 AM</td>
+                                <td>125000</td>
+                            </tr>
+                            <tr>
+                                <td>Polar Express</td>
+                                <td>North Pole</td>
+                                <td>25</td>
+                                <td>2:30 PM</td>
+                                <td>25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+
+    <!-- Add Train -->
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Add A Train Here!</h5>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Train Name</label>
+                        <input type="text" class="form-control" id="train-name" placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">First Train Time</label>
+                        <input type="text" class="form-control" id="first-train" placeholder="First Train Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency" placeholder="Frequency (min)">
+                    </div>
+                </form>    
+                <a id="add-train"href="#" class="btn btn-primary">Add Train</a>
+            </div>
+        </div>
+    </div>
+
+
 </body>
+
 </html>
